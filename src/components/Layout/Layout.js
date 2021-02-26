@@ -1,16 +1,22 @@
 import style from './Layout.module.css'
 
-const Layout = ({id, title, descr, bgColor, bgImage}) => {
+const Layout = ({id, title,  bgColor, bgImage, children }) => {
+    const sectionStyle={};
+    if (bgImage) {
+        sectionStyle.backgroundImage=`url(${bgImage})`;
+    }
+    if (bgColor) {
+        sectionStyle.backgroundColor=bgColor;
+    }
 return (
-        <section className={style.root} id={Layout} style={{backgroundImage: bgImage ? `url(${bgImage})` : 'none',
-            backgroundColor: bgColor}}>
+        <section className={style.root} id={id} style={sectionStyle}>
             <div className={style.wrapper}>
                 <article>
                     <div className={style.title}>
                         <h3>{title}</h3>
                     </div>
                     <div className={style.desc + ' ' + style.full}>
-                        <p>{descr}</p>
+                        {children}
                     </div>
                 </article>
             </div>
