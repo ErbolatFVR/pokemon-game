@@ -147,7 +147,7 @@ function App() {
 
         <div className="App">
             <Header
-                title="Pokemon Game?"
+                title="Pokemon Game"
                 deskr="Эта приложения — о карточной игре. О симуляторе коллекционной карточной игры Pokemon"
             />
             <Layout id="Layout1" bgImage={bg1}
