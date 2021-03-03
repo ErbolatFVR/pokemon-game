@@ -1,12 +1,12 @@
-import style from './Header.module.css';
+import s from './Header.module.css';
 
-function Header(props) {
+const Header = ({title, deskr}) => {
     return (
-        <header className={style.root}>
-            <div className={style.forest}></div>
-            <div className={style.container}>
-                <h1>{props.title}</h1>
-                <p>{props.deskr}</p>
+        <header className={s.root}>
+            <div className={s.forest}></div>
+            <div className={s.container}>
+                <h1>{title}</h1>
+                <p>{deskr}</p>
             </div>
         </header>
     );
