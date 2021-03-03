@@ -2,8 +2,10 @@ import s from './Card.module.css'
 import cardBackSide from './assets/card-back-side.jpg'
 
 const PokemonCard = ({name, img, id, type, values}) => {
+    const handle = () => {
+        console.log('Имя этого покемона: ' + name)}
     return (
-        <div className={s.root}>
+        <div className={s.root } onClick={handle}>
             <div className={s.pokemonCard}>
                 <div className={s.cardFront}>
                     <div className={`${s.wrap} ${s.front}`}>
